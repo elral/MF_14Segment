@@ -98,8 +98,10 @@ void Segment14::set(int16_t messageID, char *setPoint)
     switch (messageID) {
     case -1:
         // tbd., get's called when Mobiflight shuts down
+        break;
     case -2:
         // tbd., get's called when PowerSavingMode is entered
+        break;
     case 0:
         test();
         break;
