@@ -17,21 +17,20 @@
     "Info": {
       "CanInstallFirmware": true,
       "CanResetBoard": true,
-      "FirmwareBaseName": "mobiflight_template_raspberrypico",
+      "FirmwareBaseName": "elral_14Segment_raspberrypico",
       "FirmwareExtension": "uf2",
-      "FriendlyName": "MobiFlight Template RaspiPico",
-      "LatestFirmwareVersion": "0.0.1",
-      "MobiFlightType": "Mobiflight Template RaspiPico",
+      "FriendlyName": "Elral 14Segment",
+      "LatestFirmwareVersion": "0.9.0",
+      "MobiFlightType": "Elral 14Segment RaspiPico",
       "ResetFirmwareFile": "reset.raspberry_pico_flash_nuke.uf2",
       "CustomDeviceTypes": [
-        "MOBIFLIGHT_TEMPLATE",
-        "MOBIFLIGHT_TEMPLATE2"
+        "Elral_14Segment"
       ],
       "Community": {
-        "Project": "Your Project",
-        "Website": "https://YourWebsite.com",
-        "Docs": "https://YourWebsite.com",
-        "Support": "https://YourWebsite.com"
+        "Project": "14 Segment Display",
+        "Website": "https://github.com/elral/MF_14Segment",
+        "Docs": "https://github.com/elral/MF_14Segment",
+        "Support": "https://github.com/elral/MF_14Segment"
       }
     },
     "ModuleLimits": {

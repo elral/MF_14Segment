@@ -1,12 +1,11 @@
 #pragma once
 
 #include <Arduino.h>
-#include "MyCustomClass.h"
+#include "14Segment.h"
 
 // only one entry required if you have only one custom device
 enum {
-    MY_CUSTOM_DEVICE_1 = 1,
-    MY_CUSTOM_DEVICE_2
+    MY_14SEGMENT = 1
 };
 class MFCustomDevice
 {
@@ -18,9 +17,8 @@ public:
     void set(int16_t messageID, char *setPoint);
 
 private:
-    bool           getStringFromEEPROM(uint16_t addreeprom, char *buffer);
-    bool           _initialized = false;
-    MyCustomClass *_mydevice;
-    uint8_t        _pin1, _pin2, _pin3;
-    uint8_t        _customType = 0;
+    bool getStringFromEEPROM(uint16_t addreeprom, char *buffer);
+    bool _initialized = false;
+    Segment14 * _my14segment;
+    uint8_t _customType = 0;
 };

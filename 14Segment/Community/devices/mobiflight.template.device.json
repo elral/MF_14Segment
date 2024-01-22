@@ -1,19 +1,27 @@
 {
     "$schema": "./mfdevice.schema.json",
     "Info": {
-      "Label": "Mobiflight's template",
-      "Type": "MOBIFLIGHT_TEMPLATE",
+      "Label": "14 Segment",
+      "Type": "Elral_14Segment",
       "Author": "Mobiflight",
       "URL": "https://github.com",
       "Version" : "1.0.0"
     },
     "Config": {
-      "Pins": [
-        "Pin 1",
-        "Pin 2",
-        "Pin 3"
-      ],
-      "isI2C": false
+      "Pins": [],
+      "I2C": {
+        "Enabled": true,
+        "Addresses": [
+          "0x70",
+          "0x71",
+          "0x72",
+          "0x73",
+          "0x74",
+          "0x75",
+          "0x76",
+          "0x77"
+        ]
+      }
     },
     "MessageTypes": [
       {
