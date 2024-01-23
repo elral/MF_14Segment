@@ -188,9 +188,6 @@ AlphaNum4::AlphaNum4(void) {}
 void AlphaNum4::begin(uint8_t addr)
 {
     _addrI2C = addr;
-    Wire.begin();
-    Wire.setClock(400000);
-
     // turn on oscillator
     uint8_t buffer = 0x21;
     Wire.beginTransmission(_addrI2C);
