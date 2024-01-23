@@ -8,7 +8,7 @@
     Change/add your code as needed.
 ********************************************************************************** */
 
-Adafruit_AlphaNum4 alpha4 = Adafruit_AlphaNum4();
+//Adafruit_AlphaNum4 alpha4 = Adafruit_AlphaNum4();
 
 
 Segment14::Segment14()
@@ -25,13 +25,13 @@ void Segment14::attach(uint8_t addrI2C)
     _addrI2C = addrI2C;
     Wire.begin();
     Wire.setClock(400000);
-    if (!FitInMemory(sizeof(Adafruit_AlphaNum4))) {
+    if (!FitInMemory(sizeof(AlphaNum4))) {
         // Error Message to Connector
         cmdMessenger.sendCmd(kStatus, F("Custom Device does not fit in Memory"));
         return;
     }
-    alpha4 = new (allocateMemory(sizeof(Adafruit_AlphaNum4))) Adafruit_AlphaNum4();
-    if (alpha4->begin(_addrI2C))
+    alpha4 = new (allocateMemory(sizeof(AlphaNum4))) AlphaNum4();
+    alpha4->begin(_addrI2C);
     _initialised = true;
 }
 

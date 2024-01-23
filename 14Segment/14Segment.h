@@ -2,8 +2,7 @@
 
 #include "Arduino.h"
 #include <Wire.h>
-#include <Adafruit_GFX.h>
-#include "Adafruit_LEDBackpack.h"
+#include "14Segment_driver.h"
 
 class Segment14
 {
@@ -17,7 +16,7 @@ public:
     void test();
 
 private:
-    bool               _initialised;
-    uint8_t            _addrI2C;
-    Adafruit_AlphaNum4 *alpha4;
+    bool       _initialised;
+    uint8_t    _addrI2C;
+    AlphaNum4 *alpha4;
 };
