@@ -260,9 +260,21 @@ void AlphaNum4::writeDigitRaw(uint8_t n, uint16_t bitmask)
 void AlphaNum4::writeDigitAscii(uint8_t n, uint8_t a, bool d)
 {
     uint16_t font = pgm_read_word(alphafonttable + a);
-
     displaybuffer[n] = font;
-
     if (d)
         displaybuffer[n] |= (1 << 14);
+}
+
+void AlphaNum4::writeAscii(char *text, uint8_t dot) {
+    for (uint8_t i = 0; i < 4; i++) {
+        if (text[i] == 0x00)
+            break;
+        writeDigitAscii(i, text[i]);
+    }
+}
+
+void AlphaNum4::setDot(uint8_t digit) {
+    if (digit > 3)
+        return;
+    displaybuffer[digit] |= (1 << 14);
 }

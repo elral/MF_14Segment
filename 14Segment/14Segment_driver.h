@@ -117,6 +117,19 @@ public:
     */
     void writeDigitAscii(uint8_t n, uint8_t ascii, bool dot = false);
 
+    /*!
+      @brief  Write up to 4 ASCII characters to alphanumeric display.
+      @param  ascii  ASCII character.
+      @param  dot    number of digit, also light corresponding dot segment.
+    */
+    void writeAscii(char *text, uint8_t dot = 0);
+
+    /*!
+      @brief set the dot on alphanumeric display at digit 0...3.
+      @param  digit  Digit index (0...3).
+    */
+    void setDot(uint8_t digit);
+
 private:
     uint8_t  _addrI2C;
     uint16_t displaybuffer[8]; ///< Raw display data

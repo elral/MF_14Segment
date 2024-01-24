@@ -26,18 +26,23 @@
     "MessageTypes": [
       {
         "id": 0,
-        "label": "Show Speed Value",
-        "description": "$ will be displayed as Speed value"
+        "label": "Test function",
+        "description": "$=1 will enter testmode"
       },
       {
         "id": 1,
-        "label": "Show Heading Value",
-        "description": "$ will be displayed as Heading value"
+        "label": "Show data",
+        "description": "$ will be displayed on display"
       },
       {
         "id": 2,
-        "label": "Show AP On/Off",
-        "description": "0 = True, 1 = False"
+        "label": "Set dot",
+        "description": "Will set the dot on digit $=0...3"
+      },
+      {
+        "id": 3,
+        "label": "Set brightness",
+        "description": "Brightness 0...15"
       }
     ]
   }
