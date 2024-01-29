@@ -8,9 +8,6 @@
     Change/add your code as needed.
 ********************************************************************************** */
 
-//Adafruit_AlphaNum4 alpha4 = Adafruit_AlphaNum4();
-
-
 Segment14::Segment14()
 {
     _initialised = false;
@@ -32,6 +29,8 @@ void Segment14::attach(uint8_t addrI2C)
     }
     alpha4 = new (allocateMemory(sizeof(AlphaNum4))) AlphaNum4();
     alpha4->begin(_addrI2C);
+    alpha4->setBrightness(15);
+    _brightness = 15;
     _initialised = true;
 }
 
@@ -89,6 +88,8 @@ void Segment14::set(int16_t messageID, char *setPoint)
         MessageID == -1 will be send from the connector when Mobiflight is closed
         Put in your code to shut down your custom device (e.g. clear a display)
         MessageID == -2 will be send from the connector when PowerSavingMode is entered
+            'state' is true if PowerSaving is enabled
+            'state' is false if PowerSaving is disabled
         Put in your code to enter this mode (e.g. clear a display)
 
     ********************************************************************************** */
@@ -97,20 +98,25 @@ void Segment14::set(int16_t messageID, char *setPoint)
     // do something according your messageID
     switch (messageID) {
     case -1:
-        // tbd., get's called when Mobiflight shuts down
+        alpha4->clear();
+        alpha4->writeDisplay();
         break;
     case -2:
-        // tbd., get's called when PowerSavingMode is entered
+        if (data)
+            alpha4->setBrightness(data);
+        else
+            alpha4->setBrightness(_brightness);
         break;
     case 0:
         test();
         break;
     case 1:
-        /* code */
+        alpha4->displayString(setPoint);
+        alpha4->writeDisplay();
         break;
     case 2:
-        /* code */
-        break;
+        alpha4->setBrightness((uint8_t)data);
+        _brightness = (uint8_t)data;
     default:
         break;
     }
