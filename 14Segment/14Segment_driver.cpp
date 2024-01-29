@@ -259,13 +259,14 @@ void AlphaNum4::writeDigitRaw(uint8_t n, uint16_t bitmask)
 
 void AlphaNum4::writeDigitAscii(uint8_t n, uint8_t a, bool d)
 {
-    uint16_t font = pgm_read_word(alphafonttable + a);
+    uint16_t font    = pgm_read_word(alphafonttable + a);
     displaybuffer[n] = font;
     if (d)
         displaybuffer[n] |= (1 << 14);
 }
 
-void AlphaNum4::writeAscii(char *text, uint8_t dot) {
+void AlphaNum4::writeAscii(char *text, uint8_t dot)
+{
     for (uint8_t i = 0; i < 4; i++) {
         if (text[i] == 0x00)
             break;
@@ -273,8 +274,32 @@ void AlphaNum4::writeAscii(char *text, uint8_t dot) {
     }
 }
 
-void AlphaNum4::setDot(uint8_t digit) {
-    if (digit > 3)
+void AlphaNum4::displayString(char *digits)
+{
+    uint8_t digitCount = 0;
+    uint8_t charCount  = 0;
+
+    do {
+        if (digits[charCount + 1] == '.') {
+            writeDigitAscii(digitCount, (uint8_t)digits[charCount], true);
+            charCount++;
+        } else {
+            writeDigitAscii(digitCount, (uint8_t)digits[charCount], false);
+        }
+        charCount++;
+        digitCount++;
+    } while (digits[charCount] != 0x00 && digitCount < 4);
+}
+
+void AlphaNum4::setDot(uint8_t digit)
+{
+    if (digit > 4)
         return;
-    displaybuffer[digit] |= (1 << 14);
+    if (digit == 0) {
+        for (uint8_t i = 0; i < 4; i++) {
+            displaybuffer[digit] &= ~(1 << 14);
+        }
+    } else {
+        displaybuffer[digit - 1] |= (1 << 14);
+    }
 }

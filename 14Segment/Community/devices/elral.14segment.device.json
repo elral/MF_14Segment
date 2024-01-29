@@ -36,11 +36,6 @@
       },
       {
         "id": 2,
-        "label": "Set dot",
-        "description": "Will set the dot on digit $=0...3"
-      },
-      {
-        "id": 3,
         "label": "Set brightness",
         "description": "Brightness 0...15"
       }

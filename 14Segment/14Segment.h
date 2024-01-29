@@ -19,5 +19,6 @@ private:
     bool       _initialised;
     uint8_t    _addrI2C;
     uint8_t    _brightness;
+    uint8_t    _dotPos = 0;
     AlphaNum4 *alpha4;
 };

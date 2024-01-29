@@ -124,6 +124,10 @@ public:
     */
     void writeAscii(char *text, uint8_t dot = 0);
 
+
+    void displayString(char *digits);
+
+
     /*!
       @brief set the dot on alphanumeric display at digit 0...3.
       @param  digit  Digit index (0...3).

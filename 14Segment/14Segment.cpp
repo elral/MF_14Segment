@@ -111,14 +111,10 @@ void Segment14::set(int16_t messageID, char *setPoint)
         test();
         break;
     case 1:
-        alpha4->writeAscii(setPoint);
+        alpha4->displayString(setPoint);
         alpha4->writeDisplay();
         break;
     case 2:
-        alpha4->setDot(data);
-        alpha4->writeDisplay();
-        break;
-    case 3:
         alpha4->setBrightness((uint8_t)data);
         _brightness = (uint8_t)data;
     default:
