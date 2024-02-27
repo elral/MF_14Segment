@@ -16,9 +16,11 @@ Download the zip-file from the ([latest release](https://github.com/elral/MF_14S
 
 Copy the content to you community folder within you MobiFlight installation folder. It should look like:
 
-```[MF installation Folder]->Community->Elral_14Segment_Display->boards/
+```
+[MF installation Folder]->Community->Elral_14Segment_Display->boards/
 [MF installation Folder]->Community->Elral_14Segment_Display->devices/
-[MF installation Folder]->Community->Elral_14Segment_Display->/firmware/```
+[MF installation Folder]->Community->Elral_14Segment_Display->/firmware/
+```
 
 Connect a new Arduino Mega or Raspberry Pi Pico (or reset them), upload the firmware and define for each Display one Device with the I2C address from this display.
 
