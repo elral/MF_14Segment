@@ -38,8 +38,8 @@
       "FirmwareBaseName": "elral_14Segment_mega",
       "FirmwareExtension": "hex",
       "LatestFirmwareVersion": "0.9.0",
-      "FriendlyName": "Elral 14Segment",
-      "MobiFlightType": "Elral 14Segment Mega",
+      "FriendlyName": "Elral 14Segment Mega",
+      "MobiFlightType": "Elral_14Segment",
       "ResetFirmwareFile": "reset.arduino_mega_1_0_2.hex",
       "CustomDeviceTypes": [
         "Elral_14Segment"
