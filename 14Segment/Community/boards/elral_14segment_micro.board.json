@@ -41,7 +41,7 @@
     "MaxOutputs": 18,
     "MaxServos": 8,
     "MaxShifters": 6,
-    "MaxSteppers": 4,
+    "MaxSteppers": 0,
     "MaxInputMultiplexer": 6,
     "MaxCustomDevices": 0
   },

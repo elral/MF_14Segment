@@ -10,6 +10,8 @@ Available messageID's are:
 * 1 = Show data on the display. Decimal point is considered automatically, so must be part of the message
 * 2 = Set brigthness, values can be from 0 to 15
 
+All Boards are supported, but the stepper support for the ProMicro is deactivated due to not sufficient Flash memory.
+
 # Installation
 
 Download the zip-file from the ([latest release](https://github.com/elral/MF_14Segment/releases)).
