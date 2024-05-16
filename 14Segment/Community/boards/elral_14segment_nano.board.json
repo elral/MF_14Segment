@@ -33,7 +33,7 @@
     "FirmwareBaseName": "elral_14Segment_nano",
     "FirmwareExtension": "hex",
     "FriendlyName": "Elral 14Segment Nano",
-    "LatestFirmwareVersion": "0.9.0",
+    "LatestFirmwareVersion": "0.9.1",
     "MobiFlightType": "Elral_14Segment Nano",
     "ResetFirmwareFile": "reset.arduino_uno_1_0_2.hex",
     "CustomDeviceTypes": [
@@ -58,7 +58,7 @@
     "MaxShifters": 6,
     "MaxSteppers": 4,
     "MaxInputMultiplexer": 6,
-    "MaxCustomDevices": 0
+    "MaxCustomDevices": 8
   },
   "Pins": [
     {

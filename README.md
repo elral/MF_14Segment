@@ -24,6 +24,9 @@ Copy the content to you community folder within you MobiFlight installation fold
 [MF installation Folder]->Community->Elral_14Segment_Display->firmware/
 ```
 
-Connect a new Arduino Mega or Raspberry Pi Pico (or reset them), upload the firmware and define for each Display one Device with the I2C address from this display.
+Connect a new Arduino Mega/Uno/Nano/ProMicro or Raspberry Pi Pico (or reset them), upload the firmware and define for each Display one Device with the I2C address from this display.
 
 Refere in an output reference to the custom device and choose one of the both messageID's.
+
+With version 0.9.1 the foldername for the community folder has changed.
+If you update from 0.9.0 please delete the folder `Elral_14Segment_Display` before copying the new one from the zip file.

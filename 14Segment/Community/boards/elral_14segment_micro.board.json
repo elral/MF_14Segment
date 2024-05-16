@@ -27,7 +27,7 @@
     "FirmwareBaseName": "mobiflight_micro",
     "FirmwareExtension": "hex",
     "FriendlyName": "Arduino Pro Micro",
-    "LatestFirmwareVersion": "0.9.0",
+    "LatestFirmwareVersion": "0.9.1",
     "MobiFlightType": "MobiFlight Micro",
     "ResetFirmwareFile": "reset.arduino_promicro_1_0_2.hex"
   },
@@ -43,7 +43,7 @@
     "MaxShifters": 6,
     "MaxSteppers": 0,
     "MaxInputMultiplexer": 6,
-    "MaxCustomDevices": 0
+    "MaxCustomDevices": 8
   },
   "Pins": [
     {
